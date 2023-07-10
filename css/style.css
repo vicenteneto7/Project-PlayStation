@@ -32,6 +32,7 @@ body .all .header img {
 body .all .header .header-2 {
     width: 100%;
     text-align: right;
+    margin-right: 50px;
 }
 
 body .all .header .header-2 ul li {
@@ -72,6 +73,7 @@ body .all .header .header-2 ul li a {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
+    font-weight: 500;
 }
 
 body .all .section {
@@ -79,13 +81,14 @@ body .all .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 body .all .section .div-left {
     display: flex;
     width: 40%;
     flex-direction: column;
+    margin-left: 30px;
 }
 
 body .all .section .div-left h2 {
