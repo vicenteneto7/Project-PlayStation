@@ -81,7 +81,7 @@ body .all .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0;
+    margin: 50px 0 10px 0;
 }
 
 body .all .section .div-left {
@@ -154,6 +154,30 @@ body .all .section .div-right img {
     z-index: 2;
     
 }
+
+body .all .section .div-right button {
+    z-index: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+}
+
+body .all .section .div-right button img {
+    height: 40px;
+    width: 40px;
+}
+
+body .all .section .div-right button:hover {
+    opacity: 0.7;
+}
+
+body .all .section .div-right button:active {
+    opacity: 0.3;
+}
+
 
 body .all .section .div-right .color-box {
     position: absolute;
