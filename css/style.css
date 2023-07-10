@@ -229,3 +229,7 @@ body .all footer a img:hover {
 body .all footer a img:active {
     opacity: 0.5;
 }
+
+body .all footer a .icon-gh {
+    height: 21.3px;
+}
