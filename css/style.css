@@ -1,5 +1,5 @@
 body {
-    width: 100vw;
+
     height: 100vh;
     display: flex;
     align-items: center;
@@ -11,7 +11,6 @@ body .all {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 95%;
     background-color: #ffffff;
     border-radius: 15px;
     padding-left: 20px;
@@ -124,7 +123,16 @@ body .all .section .div-left button {
 }
 
 body .all .section .div-left button:hover {
-    opacity: 0.8;
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
 }
 
 body .all .section .div-left button:active {
@@ -201,6 +209,23 @@ body .all footer {
 
 body .all footer a img {
     height: 20px;
-    margin: 30px 40px 20px 0;
+    margin: 50px 40px 20px 0;
     cursor: pointer;
+}
+
+body .all footer a img:hover {
+    animation: scaleImg 0.8s alternate infinite;
+}
+
+@keyframes scaleImg {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.20);
+    }
+}
+
+body .all footer a img:active {
+    opacity: 0.5;
 }
