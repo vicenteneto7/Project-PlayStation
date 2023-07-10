@@ -1,6 +1,6 @@
 body {
-
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +11,7 @@ body .all {
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 90%;
     background-color: #ffffff;
     border-radius: 15px;
     padding-left: 20px;
