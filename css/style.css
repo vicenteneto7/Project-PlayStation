@@ -5,6 +5,22 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
+    background-size: 300% 200%;
+    animation: animateBackground 20s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .all {
