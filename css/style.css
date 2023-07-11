@@ -5,7 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
-    background-size: 300% 200%;
+    background-size: 250% 200%;
     animation: animateBackground 20s linear infinite;
 }
 
