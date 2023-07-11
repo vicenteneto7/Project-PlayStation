@@ -4,10 +4,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, rgb(199, 198, 219) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
-body .all {
+.all {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -17,25 +17,25 @@ body .all {
     padding-left: 20px;
 }
 
-body .all .header {
+.all .header {
     display: flex;
     width: 100%;
     align-items: center;
 }
 
-body .all .header img {
+.header img {
     width: 50px;
     margin: 30px 0;
 
 }
 
-body .all .header .header-2 {
+.header .header-2 {
     width: 100%;
     text-align: right;
     margin-right: 50px;
 }
 
-body .all .header .header-2 ul li {
+.header .header-2 ul li {
     list-style: none;
     display: inline-block;
     text-decoration: none;
@@ -43,18 +43,22 @@ body .all .header .header-2 ul li {
     cursor: pointer;
 }
 
-body .all .header .header-2 ul li {
+.header .header-2 ul li {
     text-decoration: none;
     color: rgb(0, 0, 0);
     transition: all 0.5s;
     position: relative;
 }
 
-body .all .header .header-2 ul li:hover {
+.header .header-2 ul li:active {
+    opacity: 0.2;
+}
+
+.header .header-2 ul li:hover {
     color: #000000;
 }
 
-body .all .header .header-2 ul li::after {
+.header .header-2 ul li::after {
     content: "";
     position: absolute;
     background-color: #000000;
@@ -65,18 +69,22 @@ body .all .header .header-2 ul li::after {
     transition: 0.3s;
 }
 
-body .all .header .header-2 ul li:hover::after {
+.header .header-2 ul li:hover::after {
     width: 100%;
 }
 
-body .all .header .header-2 ul li a {
+.header .header-2 ul li::after:active {
+    opacity: 0.2;
+}
+
+.header .header-2 ul li a {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
     font-weight: 500;
 }
 
-body .all .section {
+.all .section {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -84,7 +92,7 @@ body .all .section {
     margin: 50px 0 10px 0;
 }
 
-body .all .section .div-left {
+.section .div-left {
     position: relative;
     display: flex;
     width: 40%;
@@ -92,38 +100,54 @@ body .all .section .div-left {
     margin-left: 30px;
 }
 
-body .all .section .div-left h2 {
+.section .div-left h2 {
     font-size: 54px;
 }
 
-body .all .section .div-left h3 {
+.section .div-left h3 {
     font-size: 30px;
     color: #707070;
     font-weight: 200;
     margin-top: 20px;
 }
 
-body .all .section .div-left h5 {
+.section .div-left h5 {
     font-size: 20px;
     color: #000000;
     margin: 30px 0 15px 0;
     font-weight: 100;
 }
 
-body .all .section .div-left button {
+.section .div-left button {
     width: 140px;
     border: none;
     padding: 12px 10px;
     cursor: pointer;
     color: #ffffff;
     background: rgb(2, 0, 36);
-    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(141, 141, 255) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
     margin: 20px 0;
     border-radius: 6px;
     outline: none;
+    background-size: 300% 200%;
+    animation: animateButton 20s linear infinite;
 }
 
-body .all .section .div-left button:hover {
+@keyframes animateButton {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.section .div-left button:hover {
     animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -131,26 +155,43 @@ body .all .section .div-left button:hover {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.05);
     }
 }
 
-body .all .section .div-left button:active {
+.section .div-left button:active {
     opacity: 0.5;
 }
 
-body .all .section .div-left::before {
+.section .div-left::before {
     content: "";
     width: 10px;
     height: 58%;
-    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(141, 141, 255) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
     position: absolute;
     left: -30px;
     top: 8px;
+    background-size: 1000% 200%;
+    animation: animateBlock 20s linear infinite;
 }
 
-body .all .section .div-right {
+@keyframes animateBlock {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section .div-right {
     position: relative;
     display: flex;
     align-items: center;
@@ -158,13 +199,13 @@ body .all .section .div-right {
     overflow: hidden;
 }
 
-body .all .section .div-right img {
+.section .div-right img {
     width: 90%;
     z-index: 2;
-    
+
 }
 
-body .all .section .div-right button {
+.section .div-right button {
     z-index: 1;
     border: none;
     outline: none;
@@ -174,33 +215,48 @@ body .all .section .div-right button {
     cursor: pointer;
 }
 
-body .all .section .div-right button img {
+.section .div-right button img {
     height: 40px;
     width: 40px;
 }
 
-body .all .section .div-right button:hover {
+.section .div-right button:hover {
     opacity: 0.7;
 }
 
-body .all .section .div-right button:active {
+.section .div-right button:active {
     opacity: 0.3;
 }
 
-
-body .all .section .div-right .color-box {
+.section .div-right .color-box {
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(141, 141, 255) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgb(190, 186, 255) 0%, rgb(255, 141, 141) 35%, rgba(0, 212, 255, 1) 100%);
     width: 80%;
     height: 100%;
     border-radius: 20px 0 0 20px;
     z-index: 1;
     transform: translateX(150px);
+    background-size: 300% 200%;
+    animation: animateBox 20s alternate infinite;
 }
 
-body .all footer {
+@keyframes animateBox {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+footer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -208,13 +264,13 @@ body .all footer {
     justify-content: center;
 }
 
-body .all footer a img {
+footer a img {
     height: 20px;
     margin: 50px 40px 20px 0;
     cursor: pointer;
 }
 
-body .all footer a img:hover {
+footer a img:hover {
     animation: scaleImg 0.8s alternate infinite;
 }
 
@@ -222,15 +278,16 @@ body .all footer a img:hover {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.20);
     }
 }
 
-body .all footer a img:active {
+footer a img:active {
     opacity: 0.5;
 }
 
-body .all footer a .icon-gh {
+footer a .icon-gh {
     height: 21.3px;
 }
